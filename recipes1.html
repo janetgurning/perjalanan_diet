@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id">
+<html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,7 +41,7 @@
     margin: 0 auto;
   }
 
-  /* Main gallery container */
+  /* Gallery table */
   .gallery-table {
     width: 100%;
     max-width: 1357px;
@@ -54,37 +54,37 @@
   }
 
   .gallery-table img {
-    width: 100%;
-    height: auto;
+    width: 339px; /* ukuran tetap */
+    height: 339px; /* ukuran tetap */
     display: block;
   }
 </style>
 
 <script type="text/javascript">
-function MM_swapImgRestore() {
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
-function MM_preloadImages() {
+function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
 }
-function MM_findObj(n, d) {
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
   var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
     d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
   if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
   for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
   if(!x && d.getElementById) x=d.getElementById(n); return x;
 }
-function MM_swapImage() {
+
+function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
 </script>
 </head>
 
-<body onLoad="MM_preloadImages(
-'img/2.png','img/4.png','img/12.png','img/10.png','img/8.png','img/14.png','img/16.png','img/6.png')">
+<body onLoad="MM_preloadImages('img/index2.png','img/about2.png','img/recipe2.png','img/quotes2.png','img/hihihhi.png','img/vsdicjadicj.png','img/dcudsvsio.png','img/vjidvjsfvioj.png','img/fivjsdriovjawe9ovjs.png','img/vifvjsip.png','img/vsvijewjvweo.png','img/eaicafje.png')">
 
 <!-- Border Image -->
 <img src="img/border.png" alt="Border" class="border-img"/>
@@ -95,7 +95,7 @@ function MM_swapImage() {
     <td width="25%"></td>
     <td><a href="index2.html"><img src="img/index1.png" alt="index" id="img1" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img1','','img/index2.png',1)"></a></td>
     <td><a href="about.html"><img src="img/about1.png" alt="About" id="img2" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img2','','img/about2.png',1)"></a></td>
-    <td><a href="recipe.html" ><img src="img/recipe1.png" alt="Recipe" id="img3" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img3','','img/recipe2.png',1)"></a></td>
+    <td><a href="recipes.html"><img src="img/recipe1.png" alt="Recipe" id="img3" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img3','','img/recipe2.png',1)"></a></td>
     <td><a href="quotes.html"><img src="img/quotes1.png" alt="Quotes" id="img4" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img4','','img/quotes2.png',1)"></a></td>
     <td width="25%"></td>
   </tr>
@@ -104,17 +104,23 @@ function MM_swapImage() {
 <!-- Gallery -->
 <table class="gallery-table">
   <tr>
-    <td><a href="recipes1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('oke','','img/2.png',1)"><img src="img/1.png" alt="" id="oke"></a></td>
-    <td><a href="recipes1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sip','','img/4.png',1)"><img src="img/3.png" alt="" id="sip"></a></td>
-    <td><a href="recipes1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('edfrg','','img/12.png',1)"><img src="img/11.png" alt="" id="edfrg"></a></td>
-    <td><a href="recipes1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('rdhdhd','','img/10.png',1)"><img src="img/9.png" id="rdhdhd"></a></td>
+    <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('hehehe','','img/hihihhi.png',1)"><img src="img/2.png" alt="" id="hehehe"></a></td>
+    <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('huhu','','img/vsdicjadicj.png',1)"><img src="img/4.png" alt="" width="339" height="339" id="huhu"></a></td>
+    <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('hehi','','img/dcudsvsio.png',1)"><img src="img/12.png" alt="" width="339" height="339" id="hehi"></a></td>
+    <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('hoho','','img/vjidvjsfvioj.png',1)"><img src="img/10.png" alt="" width="339" height="339" id="hoho"></a></td>
   </tr>
   <tr>
-    <td><a href="recipes1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('fhbdhbdh','','img/8.png',1)"><img src="img/7.png" alt="" id="fhbdhbdh"></a></td>
-    <td><a href="recipes1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('tdhfdhtfd','','img/14.png',1)"><img src="img/13.png" alt="" id="tdhfdhtfd"></a></td>
-    <td><a href="recipes1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('fddrdg','','img/16.png',1)"><img src="img/15.png" alt="" id="fddrdg"></a></td>
-    <td><a href="recipes1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('rfdhrdjhdrtj','','img/6.png',1)"><img src="img/5.png" alt="" id="rfdhrdjhdrtj"></a></td>
-  </tr><table width="1034" border="0">
+    <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('heho','','img/fivjsdriovjawe9ovjs.png',1)"><img src="img/8.png" alt="" width="339" height="339" id="heho"></a></td>
+    <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('hahi','','img/vifvjsip.png',1)"><img src="img/14.png" alt="" width="339" height="339" id="hahi"></a></td>
+    <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('hohoi','','img/vsvijewjvweo.png',1)"><img src="img/16.png" alt="" width="339" height="339" id="hohoi"></a></td>
+    <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('hegho','','img/eaicafje.png',1)"><img src="img/6.png" alt="" width="339" height="339" id="hegho"></a></td>
+  </tr>
+</table>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.3.1.js"></script>
+	<table width="1034" border="0">
   <tbody>
     <tr>
       <td><img src="img/Contct .png" width="1311" height="200" alt=""/></td>
@@ -122,12 +128,5 @@ function MM_swapImage() {
   </tbody>
 </table>
 
-</table>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap-4.3.1.js"></script>
 </body>
 </html>
-
-

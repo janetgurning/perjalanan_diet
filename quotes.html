@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quotes Diet</title>
+<link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+
+  /* Navbar table styling */
+  .navbar-table {
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+  }
+
+  .navbar-table img {
+    width: 116px;
+    height: 50px;
+    transition: transform 0.3s;
+  }
+
+  .navbar-table img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Border image */
+  .border-img {
+    width: 100%;
+    max-width: 1357px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Quotes container */
+  .quotes-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: left;
+  }
+
+  .quote {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .quote.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .quote-author {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #aaa;
+  }
+</style>
+
+<script type="text/javascript">
+function MM_preloadImages() {
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; 
+    for(i=0; i<a.length; i++)
+      if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}
+  }
+}
+function MM_swapImgRestore() {
+  var i,x,a=document.MM_sr; 
+  for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) {
+  var p,i,x;  
+  if(!d) d=document; 
+  if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);
+  }
+  if(!(x=d[n])&&d.all) x=d.all[n]; 
+  for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); 
+  return x;
+}
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; 
+  document.MM_sr=new Array; 
+  for(i=0;i<(a.length-2);i+=3)
+    if ((x=MM_findObj(a[i]))!=null){
+      document.MM_sr[j++]=x; 
+      if(!x.oSrc) x.oSrc=x.src; 
+      x.src=a[i+2];
+    }
+}
+
+// Animate quotes on scroll
+function animateQuotes() {
+  var quotes = document.querySelectorAll('.quote');
+  var delay = 0;
+  quotes.forEach(function(q) {
+    setTimeout(function(){
+      q.classList.add('visible');
+    }, delay);
+    delay += 400;
+  });
+}
+
+window.onload = function() {
+  MM_preloadImages(
+    'img/index2.png','img/about2.png','img/recipe2.png','img/quotes2.png'
+  );
+  animateQuotes();
+};
+</script>
+</head>
+
+<body>
+
+<!-- Border Image -->
+<img src="img/border.png" alt="Border" class="border-img"/>
+
+<!-- Navbar -->
+<table class="navbar-table">
+  <tr>
+    <td width="25%"></td>
+    <td><a href="index2.html"><img src="img/index1.png" alt="index" id="img1" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img1','','img/index2.png',1)"></a></td>
+    <td><a href="about.html"><img src="img/about1.png" alt="About" id="img2" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img2','','img/about2.png',1)"></a></td>
+    <td><a href="recipes.html"><img src="img/recipe1.png" alt="Recipe" id="img3" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img3','','img/recipe2.png',1)"></a></td>
+    <td><a href="quotes.html"><img src="img/quotes1.png" alt="Quotes" id="img4" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img4','','img/quotes2.png',1)"></a></td>
+    <td width="25%"></td>
+  </tr>
+</table>
+
+<!-- Quotes Section -->
+<div class="quotes-container">
+  <div class="quote">"Your diet is a bank account. Good food choices are good investments."<span class="quote-author">— Bethenny Frankel</span></div>
+  <div class="quote">"Take care of your body. It’s the only place you have to live."<span class="quote-author">— Jim Rohn</span></div>
+  <div class="quote">"Eat food. Not too much. Mostly plants."<span class="quote-author">— Michael Pollan</span></div>
+  <div class="quote">"Let food be thy medicine, and medicine be thy food."<span class="quote-author">— Hippocrates</span></div>
+  <div class="quote">"The food you eat can be either the safest and most powerful form of medicine or the slowest form of poison."<span class="quote-author">— Ann Wigmore</span></div>
+  <div class="quote">"Every time you eat or drink, you are either feeding disease or fighting it."<span class="quote-author">— Heather Morgan</span></div>
+  <div class="quote">"Moderation. Small helpings. Sample a little bit of everything. These are the secrets of happiness and good health."<span class="quote-author">— Julia Child</span></div>
+  <div class="quote">"I am a better person when I have less on my plate."<span class="quote-author">— Elizabeth Gilbert</span></div>
+  <div class="quote">"Dieting is the only game where you win when you lose!"<span class="quote-author">— Karl Lagerfeld</span></div>
+  <div class="quote">"We never repent of having eaten too little."<span class="quote-author">— Thomas Jefferson</span></div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.3.1.js"></script>
+	<table width="1034" border="0">
+  <tbody>
+    <tr>
+      <td><img src="img/Contct .png" width="1311" height="200" alt=""/></td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
+
